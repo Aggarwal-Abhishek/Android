@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.abhishek.pdfmanager.backgroundimage.AddBackgroundImageActivity">
+
+
+    <Button
+        android:id="@+id/add_background_image_add_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Image"
+        android:layout_centerHorizontal="true"
+        android:onClick="AddImage"/>
+    <TextView
+        android:id="@+id/add_background_image_txt_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_background_image_add_image_btn"
+        android:textSize="15dp"
+        />
+
+    <View
+        android:id="@+id/add_background_image_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/add_background_image_txt_image"/>
+
+    <Button
+        android:id="@+id/add_background_image_add_pdf_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add PDF"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/add_background_image_view_1"
+        android:onClick="AddPDF"/>
+    <TextView
+        android:id="@+id/add_background_image_pdf_name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_background_image_add_pdf_btn"
+        android:textSize="15dp"
+        />
+
+    <View
+        android:id="@+id/watremark_image_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_below="@id/add_background_image_pdf_name_txt"
+        android:layout_marginTop="25dp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="SetBackground"
+        android:text="Set Background" />
+
+
+</RelativeLayout>

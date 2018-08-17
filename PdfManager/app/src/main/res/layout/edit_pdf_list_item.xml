@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/list_background_transparent">
+
+    <TextView
+        android:id="@+id/edit_pdf_list_item_page_no"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"/>
+
+    <ImageView
+        android:id="@+id/edit_pdf_list_item_drag_img"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edit_pdf_list_item_page_no"
+        android:layout_centerVertical="true"
+        android:src="@drawable/reorder_icon"
+        />
+
+    <ImageView
+        android:id="@+id/edit_pdf_list_item_image"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/edit_pdf_list_item_drag_img"
+        android:src="@drawable/my_ic_launcher_foreground"
+        />
+
+    <Button
+        android:id="@+id/edit_pdf_list_item_btn_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_toLeftOf="@+id/edit_pdf_list_item_btn_rotate_clockwise"
+        android:text="Rotate" />
+
+    <Button
+        android:id="@+id/edit_pdf_list_item_btn_save_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/edit_pdf_list_item_btn_close"
+        android:text="Save"
+        android:layout_marginEnd="10dp"/>
+
+    <Button
+        android:id="@+id/edit_pdf_list_item_btn_crop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/edit_pdf_list_item_btn_rotate_anticlockwise"
+        android:layout_marginEnd="10dp"
+        android:text="Crop" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rotate_clockwise_icon"
+        android:id="@+id/edit_pdf_list_item_btn_rotate_clockwise" />
+
+    <Button
+        android:id="@+id/edit_pdf_list_item_btn_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/close_icon" />
+
+    <Button
+        android:id="@+id/edit_pdf_list_item_btn_rotate_anticlockwise"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rotate_anticlockwise_icon" />
+
+
+
+</RelativeLayout>

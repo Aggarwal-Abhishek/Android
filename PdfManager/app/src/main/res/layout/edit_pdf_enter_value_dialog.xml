@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/edit_pdf_enter_value_dialog_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Value" />
+
+    <TextView
+        android:id="@+id/edit_pdf_enter_value_dialog_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_pdf_enter_value_dialog_edit_text"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/red"/>
+
+    <Button
+        android:id="@+id/edit_pdf_enter_value_dialog_positive_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Set Rotation"
+        android:layout_below="@id/edit_pdf_enter_value_dialog_response"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/edit_pdf_enter_value_dialog_negative_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Close"
+        android:layout_below="@id/edit_pdf_enter_value_dialog_response"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

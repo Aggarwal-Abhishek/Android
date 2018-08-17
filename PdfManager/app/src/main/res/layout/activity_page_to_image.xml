@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:dslv="http://schemas.android.com/apk/lib/com.mobeta.android.dslv"
+    tools:context="com.abhishek.pdfmanager.pagetoimage.PageToImageActivity">
+
+    <com.mobeta.android.dslv.DragSortListView
+        android:id="@+id/page_to_image_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/gradient"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.abhishek.pdfmanager.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp"
+            android:onClick="ViewPDF">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/open"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="View PDF"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="EditPDF"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleX="-1"
+                android:layout_gravity="center"
+                android:background="@drawable/edit"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Edit PDF \n( Rotate, Crop, Reorder, Delete, Save)"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="MergePDF"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/merge"
+                android:layout_gravity="center"
+                android:rotation="90"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Merge PDFs"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="SplitPDF"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/split"
+                android:layout_gravity="center"
+                android:rotation="90"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Split PDF"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="ProtectWithPassword"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/lock"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Protect with Password"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="RemovePassword"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/lock_open"
+                android:scaleX="-1"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Remove Protection"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="ExtractImages"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/extract_images"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Extract Images"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="ImageToPDF"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/pdf"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Images to PDF"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="PageToImage"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/image"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Page to Image"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="WatermarkText"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/text_watermark"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Watermark Text"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="WatermarkImage"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/watermark"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Watermark Image"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="AddBackgroundImage"
+            android:orientation="horizontal"
+            android:background="@color/list_background"
+            android:elevation="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/background"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Add Background Image"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

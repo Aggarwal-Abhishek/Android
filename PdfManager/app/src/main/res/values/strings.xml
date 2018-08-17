@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PdfManager</string>
+    <string name="password_protect_intro">Persons with Owner Password have Full Control over the PDF.\nThey can set permissions regarding whether the file can be printed, modified, extracted etc.\n\nPersons with User Password can only view the PDF and performs operations as specified by Owner.</string>
+    <string name="split_pdf_intro">Enter comma separate ranges.\nExample : 1 – 5, 5 – 10, 11  will create 3 PDF\'s with pages 1 to 5, 5 to 10 and page 11.\nRange : 10 - 5 will contains pages from 5 - 10 in reverse order.</string>
+    <string name="m_new_folder">New Folder</string>
+</resources>

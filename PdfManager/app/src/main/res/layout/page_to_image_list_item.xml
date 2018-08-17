@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/list_background"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10.56"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/page_to_image_page_no" />
+
+        <ImageView
+            android:id="@+id/page_to_image_imageview"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/page_to_image_page_no" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/page_to_image_page_no"
+            android:background="@drawable/save_icon"
+            android:id="@+id/page_to_image_save_btn" />
+
+        <Button
+            android:id="@+id/page_to_image_close_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/page_to_image_save_btn"
+            android:layout_alignTop="@+id/page_to_image_imageview"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/close_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/page_to_image_close_btn"
+            android:layout_alignBottom="@+id/page_to_image_close_btn"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/page_to_image_close_btn"
+            android:text="Close"
+            android:id="@+id/page_to_image_close_txtview" />
+
+        <TextView
+            android:id="@+id/page_to_image_save_txtview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/page_to_image_save_btn"
+            android:layout_alignBottom="@+id/page_to_image_save_btn"
+            android:layout_alignEnd="@+id/page_to_image_close_txtview"
+            android:text="Save Page As Image" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

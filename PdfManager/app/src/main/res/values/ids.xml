@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="edit_pdf_drag_handle_id" type="id">@+id/edit_pdf_list_item_drag_img</item>
+</resources>

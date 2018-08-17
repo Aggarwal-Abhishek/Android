@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.abhishek.pdfmanager.textwatermark.TextWatermarkActivity">
+
+
+
+    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+    <!-- :nextFocusUp and :nextFocusLeft have been set to the id of this component
+    to prevent the dummy from receiving focus again -->
+    <AutoCompleteTextView android:id="@+id/autotext"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:nextFocusUp="@id/autotext"
+        android:nextFocusLeft="@id/autotext"/>
+
+
+
+
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/text_watermark_select_pdf_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Pdf"
+                android:onClick="SelectPDF"/>
+
+            <TextView
+                android:id="@+id/text_watermark_pdf_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/text_watermark_select_pdf_btn"
+                android:layout_alignBottom="@+id/text_watermark_select_pdf_btn"
+                android:layout_marginStart="25dp"
+                android:textSize="20dp"
+                android:layout_toEndOf="@+id/text_watermark_select_pdf_btn"
+                />
+
+            <View
+                android:id="@+id/text_watermark_view_1"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/text_watermark_select_pdf_btn"
+                android:background="@color/black"/>
+
+            <EditText
+                android:id="@+id/text_watermark_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/text_watermark_view_1"
+                android:hint="Watermark Text"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/text_watermark_rotation_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Rotation"
+                android:onClick="SelectRotation"
+                android:layout_below="@id/text_watermark_edit_text"/>
+
+
+            <Button
+                android:id="@+id/text_watermark_font_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/text_watermark_rotation_btn"
+                android:layout_marginTop="10dp"
+                android:onClick="SelectFont"
+                android:text="Font" />
+
+
+            <Button
+                android:id="@+id/text_watermark_alignment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/text_watermark_font_btn"
+                android:layout_below="@+id/text_watermark_font_btn"
+                android:layout_marginTop="10dp"
+                android:onClick="SelectAlignment"
+                android:text="Alignment" />
+
+
+            <Button
+                android:id="@+id/text_watermark_font_size_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Font Size"
+                android:layout_marginTop="10dp"
+                android:onClick="SelectFontSize"
+                android:layout_below="@id/text_watermark_alignment_btn"/>
+
+            <Button
+                android:id="@+id/text_watermark_opacity_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opacity"
+                android:layout_marginTop="10dp"
+                android:onClick="SelectOpacity"
+                android:layout_below="@id/text_watermark_font_size_btn"/>
+
+            <Button
+                android:id="@+id/text_watermark_font_color_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Font Color"
+                android:layout_marginTop="10dp"
+                android:onClick="SelectFontColor"
+                android:layout_below="@id/text_watermark_opacity_btn"/>
+
+            <Button
+                android:id="@+id/text_watermark_margin_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Margin"
+                android:onClick="SelectMargin"
+                android:layout_below="@id/text_watermark_font_color_btn"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/text_watermark_opacity_btn"
+                android:layout_alignBottom="@+id/text_watermark_opacity_btn"
+                android:layout_alignStart="@+id/text_watermark_txt_font_size"
+                android:textSize="25dp"
+                android:id="@+id/text_watermark_txt_opacity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/text_watermark_font_size_btn"
+                android:layout_alignBottom="@+id/text_watermark_font_size_btn"
+                android:layout_alignStart="@+id/text_watermark_txt_alignment"
+                android:textSize="25dp"
+                android:id="@+id/text_watermark_txt_font_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/text_watermark_alignment_btn"
+                android:layout_alignBottom="@+id/text_watermark_alignment_btn"
+                android:layout_alignStart="@+id/text_watermark_txt_font"
+                android:textSize="25dp"
+                android:id="@+id/text_watermark_txt_alignment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/text_watermark_font_btn"
+                android:layout_alignBottom="@+id/text_watermark_font_btn"
+                android:layout_alignStart="@+id/text_watermark_txt_rotation"
+                android:textSize="25dp"
+                android:id="@+id/text_watermark_txt_font" />
+
+            <TextView
+                android:id="@+id/text_watermark_txt_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/text_watermark_rotation_btn"
+                android:layout_alignBottom="@+id/text_watermark_rotation_btn"
+                android:layout_alignStart="@+id/text_watermark_pdf_name_txt"
+                android:textSize="25dp" />
+
+            <View
+                android:id="@+id/text_watermark_txt_fontcolor"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/text_watermark_font_color_btn"
+                android:layout_alignStart="@+id/text_watermark_txt_opacity"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text_watermark_txt_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/text_watermark_margin_btn"
+                android:layout_alignBottom="@+id/text_watermark_margin_btn"
+                android:layout_alignStart="@+id/text_watermark_txt_fontcolor"
+                android:textSize="25dp" />
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Add Watermark"
+        android:onClick="Watermark"/>
+
+
+</RelativeLayout>
