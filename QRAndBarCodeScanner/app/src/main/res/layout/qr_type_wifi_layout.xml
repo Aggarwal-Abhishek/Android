@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="100sp"
+    android:id="@+id/QrTypeWifiLayout_ssid"
+    android:hint="SSID"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:id="@+id/QrTypeWifiLayout_password"
+        android:hint="Password" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:id="@+id/QrTypeWifiLayout_type"
+        android:text="WEP"/>
+
+
+</LinearLayout>

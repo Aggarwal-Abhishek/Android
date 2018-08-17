@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abhishekaggarwal.qrandbarcodescanner.QrCodeGenerator.GenerateQrCodeActivity">
+
+            <Button
+                android:id="@+id/typeOfQRCodeButton"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_alignParentTop="true"
+                android:background="@color/blue"
+                android:text="TEXT"
+
+
+
+                />
+
+            <Button
+                android:id="@+id/barcodeSizeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:background="@color/blue"
+                android:text="BARCODE SIZE"
+                android:layout_below="@+id/typeOfQRCodeButton"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp" />
+
+            <Button
+                android:id="@+id/barcodeErrorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:background="@color/blue"
+                android:text="ERROR"
+                android:layout_alignBaseline="@+id/barcodeSizeButton"
+                android:layout_alignBottom="@+id/barcodeSizeButton"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/barcodeEncodeingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:background="@color/blue"
+                android:text="ENCODING TYPE"
+                android:layout_alignBaseline="@+id/barcodeErrorButton"
+                android:layout_alignBottom="@+id/barcodeErrorButton"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp" />
+
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barcodeErrorButton"
+        android:layout_marginTop="10dp"
+        android:text="GENERATE"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/blue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <!--<fragment-->
+        <!--android:id="@+id/QrTypeFragment"-->
+        <!--android:name="com.example.abhishekaggarwal.qrandbarcodescanner.QrCodeGenerator.QRTypeFragments.TextFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_below="@+id/generateButton"-->
+        <!---->
+        <!---->
+        <!--/>-->
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:hint="Text"
+        android:id="@+id/QRCodeText"
+        android:layout_below="@+id/generateButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp" />
+
+    <ImageView
+        android:id="@+id/QrImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/QRCodeText"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+
+</RelativeLayout>

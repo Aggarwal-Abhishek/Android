@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/text_content_qr_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Enter Your Text"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+</LinearLayout>

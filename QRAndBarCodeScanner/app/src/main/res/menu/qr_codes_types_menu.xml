@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="TEXT" />
+    <item android:title="PHONE NUMBER" />
+    <item android:title="SMS" />
+    <item android:title="URL" />
+    <item android:title="EMAIL ADDRESS" />
+    <item android:title="CONTACT INFORMATION" />
+    <item android:title="CALENDAR EVENT" />
+    <item android:title="WIFI NETWORK" />
+    <item android:title="GEO LOCATION" />
+
+</menu>

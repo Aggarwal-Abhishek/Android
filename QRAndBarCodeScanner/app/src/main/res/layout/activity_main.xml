@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abhishekaggarwal.qrandbarcodescanner.MainActivity">
+
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="Scan"
+        android:background="@color/blue"
+        android:onClick="scan"/>
+
+    <Button
+        android:id="@+id/file_scan"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:text="Scan From Image"
+        android:background="@color/blue"
+        android:onClick="fileScan"
+        android:layout_below="@+id/scan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/GenerateQrCodeButton"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_below="@+id/file_scan"
+        android:layout_marginTop="10dp"
+        android:text="Generate QR Code"
+        android:background="@color/blue"
+        android:onClick="generateQR"/>
+
+
+</RelativeLayout>
