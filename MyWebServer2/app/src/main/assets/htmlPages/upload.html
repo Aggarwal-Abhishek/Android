@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+    <style>
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            margin: 10px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            cursor: pointer;
+            width: 80%;
+            letter-spacing: 10px;
+        }
+        .list{
+            font-size: 25px;
+            text-align: center;
+        }
+        input[type="file"] {
+            display: none;
+        }
+
+    </style>
+
+    <script>
+        var totalsize=0;
+
+        window.onload = function(){
+
+            var path = window.location.hostname+":"+window.location.port ;
+            //var path = "192.168.43.1:2222";
+
+            var key = Math.round(Math.random()*10000000);
+
+            document.getElementById('form').action = document.getElementById('form').action + key ;
+
+            var socket = new WebSocket("ws://"+path+"/register/"+key);
+            socket.onopen = function(event){};
+            socket.onerror = function(error){};
+            socket.onmessage = function(event){
+                document.getElementById('progress').innerHTML = "Progress : "+ Math.round(((100*event.data)/totalsize)) +
+                    " % &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uploaded : "+filesize(event.data)
+                    +" / "+filesize(totalsize);
+
+            }
+            socket.onclose = function(){};
+
+        }
+
+        function filesize(size){
+            if(size < 1024)return Math.round(size) + ' Bytes ';
+            size=size/1024;
+            if(size < 1024)return Math.round(size) + ' KB ';
+            size=size/1024;
+            if(size < 1024)return Math.round(size) + ' MB ';
+            size=size/1024;
+            if(size < 1024)return Math.round(size) + ' GB ';
+            return " :-0 " ;
+        }
+        function GetFileSizeNameAndType(){
+            document.getElementById('fp').innerHTML = " ";
+            var fi = document.getElementById('file');
+            var totalFileSize = 0;
+            if (fi.files.length > 0){
+                for (var i = 0; i <= fi.files.length - 1; i++){
+                    var fsize = fi.files.item(i).size;
+                    totalFileSize = totalFileSize + fsize;
+                    document.getElementById('fp').innerHTML =
+                    document.getElementById('fp').innerHTML
+                    +
+                    fi.files.item(i).name + '<br>'
+                    +
+                    "<p style='font-size:20px;'>"+filesize(fsize) + ' <hr/>';
+                }
+            }
+            totalsize = totalFileSize ;
+            document.getElementById('divTotalSize').innerHTML = "Total Size is <b>" + filesize(totalFileSize) + "</b> ";
+        }
+    </script>
+
+</head>
+
+<body>
+<form id='form' action='upload/' enctype='multipart/form-data' method='post'>
+
+    <label class="button" style="width:70%;">
+        <input id='file' type='file' name='file' multiple onchange="GetFileSizeNameAndType()" />
+        Select Files
+    </label>
+
+    <div align='right'>
+        <input class='button' type='submit' value='Upload' />
+    </div>
+
+    <p id='progress' style="font-size: 25px"></p>
+
+    <hr><div id="fp" class="list"></div>
+    <p><div id="divTotalSize"></div></p><hr>
+</form>
+
+</body>
+</html>

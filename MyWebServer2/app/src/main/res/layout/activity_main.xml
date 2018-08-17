@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.abhishek.mywebserver2.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ToggleButton
+            android:id="@+id/start_server_service_toggle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10sp"
+            android:onClick="toggleServerActivity" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10sp"
+            android:text="Details"
+            android:onClick="showServerUrls"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/start_server_service_toggle_button"
+            android:background="@color/black"
+            android:layout_marginTop="10sp"
+            android:id="@+id/view" />
+
+
+        <ToggleButton
+            android:id="@+id/screen_stream_toggle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/start_server_service_toggle_button"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="10dp"
+            android:onClick="toggleScreenStreamActivity"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/view"
+            android:layout_margin="10sp"
+            android:text="Details"
+            android:onClick="showStreamUrls"/>
+
+        <TextView
+            android:id="@+id/screen_stream_quality_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/screen_stream_toggle_button"
+            android:layout_below="@+id/screen_stream_toggle_button"
+
+            android:layout_marginStart="8dp"
+            android:text="Stream Quality : "
+            android:textSize="15sp" />
+
+        <SeekBar
+            android:id="@+id/screen_stream_quality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/screen_stream_quality_text"
+            android:layout_toEndOf="@+id/screen_stream_quality_text" />
+
+        <TextView
+            android:id="@+id/screen_stream_size_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/screen_stream_toggle_button"
+            android:layout_below="@+id/screen_stream_quality_text"
+
+            android:layout_marginStart="8dp"
+            android:text="Stream Size : "
+            android:textSize="15sp" />
+
+        <SeekBar
+            android:id="@+id/screen_stream_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view2"
+            android:layout_toEndOf="@+id/screen_stream_quality_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/screen_stream_size_text"
+            android:background="@color/black"
+            android:layout_marginTop="10sp"
+            android:id="@+id/view2" />
+
+
+        <ToggleButton
+            android:id="@+id/send_data_service_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view2"
+            android:layout_margin="10sp"
+            android:onClick="toggleSendDataService"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn4"
+            android:layout_alignBottom="@+id/btn4"
+            android:layout_centerHorizontal="true"
+            android:text="Add Files"
+            android:onClick="showAddFilesDialog"/>
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_margin="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/view2"
+            android:text="Details"
+            android:onClick="showSendFileUrls"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/btn4"
+            android:background="@color/black"
+            android:layout_marginTop="10sp"
+            android:id="@+id/view3" />
+
+
+        <ToggleButton
+            android:id="@+id/receive_data_toggle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view3"
+            android:layout_margin="10sp"
+            android:onClick="toggleReceiveFilesService"/>
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/view3"
+            android:layout_margin="10sp"
+            android:text="Details"
+            android:onClick="showReceiveFileUrls"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/btn5"
+            android:background="@color/black"
+            android:layout_marginTop="10sp"
+            android:id="@+id/view4" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

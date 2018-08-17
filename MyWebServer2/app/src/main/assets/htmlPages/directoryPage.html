@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background:rgb(255, 255, 180);
+            }h{
+                font-size:40px;
+            }.polaroid {
+                width: 97%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                text-align: left;
+            }.row_item:hover{
+                background:rgba(129, 224, 201, 0.288);
+                cursor:pointer;
+            }td{
+                font-size:20px;
+            }.itemName{
+                font-size:20px;
+                text-decoration:none;
+            }img{
+                height:48px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h>&nbsp; {{location}}</h><br><br>
+
+        <table>
+            <tr>
+                <td><a class="itemName" href="{{parent}}">Parent  Directory</a></td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><a class="itemName" href="{{zip}}">Download as .zip</a></td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><a class="itemName" href="{{gallery}}">Open Images in Gallery</a></td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td class="itemName">Files On Current Level : {{filesize}} </td>
+            </tr>
+        </table>
+
+        <hr>
+        
+        <table align="center" class="polaroid" cellspacing="5"  >
+            <tr>
+                <td></td>
+                <td>Name</td>
+                <td>&nbsp;&nbsp;</td>
+                <td>Date Modified</td>
+                <td>Size</td>
+            </tr>
+            <tr>
+                <td><hr></td>
+                <td colspan="2"><hr></td>
+                <td><hr></td>
+                <td><hr></td>
+            </tr>
+
+
+            {{#list_item}}
+
+            <tr class="row_item" onclick="window.location.href = &quot;{{onclick}}&quot; ;">
+                <td><img src="{{icon}}"></td>
+                <td>{{name}}</td>
+                <td>&nbsp;&nbsp;</td>
+                <td>{{date}}</td>
+                <td>{{size}}</td>
+            </tr>
+            <tr>
+                <td><hr></td>
+                <td colspan="2"><hr></td>
+                <td><hr></td>
+                <td><hr></td>
+            </tr>
+    
+
+            {{/list_item}}
+
+        </table>
+        {{^list_item}}
+            <h><br><br><hr>Empty Directory</h>
+        {{/list_item}}
+
+    </body>
+</html>

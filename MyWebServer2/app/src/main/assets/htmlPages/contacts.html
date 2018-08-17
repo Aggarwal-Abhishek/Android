@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+                body{
+                    background:rgb(255, 255, 180);
+                }h{
+                    font-size:40px;
+                }.polaroid {
+                    width: 97%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    text-align: left;
+                }.row_item:hover{
+                    background:rgba(129, 224, 201, 0.288);
+                    cursor:pointer;
+                }td{
+                    font-size:20px;
+                }.itemName{
+                    font-size:20px;
+                    text-decoration:none;
+                }
+            </style>
+    </head>
+
+    <body>
+
+        <h>&nbsp; Contacts </h><br><br><hr>
+
+
+        <table align="center" class="polaroid" cellspacing="5"  >
+            <tr>
+                <td></td>
+                <td>Name</td>
+                <td>&nbsp;&nbsp;</td>
+                <td>Phone</td>
+                <td>Email</td>
+            </tr>
+            <tr>
+                <td><hr></td>
+                <td colspan="2"><hr></td>
+                <td><hr></td>
+                <td><hr></td>
+            </tr>
+
+
+            {{list}}
+
+        </table>
+
+
+    </body>
+</html>
+
+

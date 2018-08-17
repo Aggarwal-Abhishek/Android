@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{css}}">
+<style>
+        body,h1 {font-family: "Montserrat", sans-serif}
+        .w3-row-padding img {margin-bottom: 12px;}
+    </style>
+
+<script>
+
+        function load(){
+
+            for(var i=loaded;i<Math.min(loaded+9,image.length);i++){
+
+                document.getElementById('r'+((i%3)+1)).innerHTML =
+                    document.getElementById('r'+((i%3)+1)).innerHTML +
+                        "<img src='"+image[i].value+"' style='width:100%' />";
+
+            }
+            loaded += 9 ;
+
+        }
+
+
+
+
+        window.onload = function(){
+            image = document.getElementsByTagName('input');
+            loaded = 0;
+            load();
+        }
+
+    </script>
+
+
+
+<body>
+
+<div class="w3-content" style="max-width:1500px">
+
+    <!-- Header -->
+    <div class="w3-opacity">
+        <header class="w3-center w3-margin-bottom">
+            <h1><b>PHOTOLIO</b></h1>
+            <p><b>A template made by w3.css for photographers.</b></p>
+        </header>
+    </div>
+
+
+
+    <div hidden>
+
+        {{#imageItems}}
+
+            <input value="{{image}}" />
+
+        {{/imageItems}}
+
+    </div>
+
+
+
+
+
+    <div class="w3-row-padding" style="margin-bottom:12px">
+        <div id='r1' class="w3-third"></div>
+        <div id='r2' class="w3-third"></div>
+        <div id="r3" class="w3-third"></div>
+    </div>
+
+    <div class="w3-opacity">
+        <p align='center' class="w3-padding-16"><button class="w3-button w3-black" onclick="load()" >Load More</button></p>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Settings">
+
+        <EditTextPreference/>
+        <EditTextPreference
+            android:defaultValue="a"
+            android:key="password"
+            android:summary="Please enter only characters (a-z) and (0-9)"
+            android:title="Password : " />
+
+        <EditTextPreference
+            android:defaultValue="5555"
+            android:inputType="number"
+            android:key="serverport"
+            android:summary="Any Port You Like (must be greater than 1024 and less than 65535)"
+            android:title="Server Port : " />
+
+        <EditTextPreference
+            android:defaultValue="4444"
+            android:inputType="number"
+            android:key="streamport"
+            android:summary="Any Port You Like (must be greater than 1024 and less than 65535)"
+            android:title="Screen Stream Port : " />
+
+
+
+    </PreferenceCategory>
+</PreferenceScreen>

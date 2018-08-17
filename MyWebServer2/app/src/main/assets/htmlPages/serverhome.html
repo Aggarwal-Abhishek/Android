@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        margin: 10px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        cursor: pointer;
+    }.button:hover{
+        background-color: rgb(124, 204, 127);
+        font-style: oblique;
+    }.list{
+        font-size: 25px;
+        text-align: center;
+    }body{
+        background:rgb(255, 255, 180);
+    }h{
+        font-size:40px;
+    }.polaroid {
+        width: 97%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: left;
+    }.row_item:hover{
+        background:rgba(129, 224, 201, 0.288);
+        cursor:pointer;
+    }td{
+        font-size:20px;
+    }.itemName{
+        font-size:20px;
+        text-decoration:none;
+    }
+</style>
+
+
+    <script>
+    window.onload = function(){btns();}
+
+    function hide(a){document.getElementById(a).style = "display:none;";}
+    function show(a){document.getElementById(a).style = "";}
+    function btns(){
+        show('rootdir');hide('urls');hide('running');show('btns');
+    }function root(){
+        hide('urls');hide('running');hide('btns');show('rootdir');
+    }function urls(){
+        hide('rootdir');show('urls');hide('running');show('btns');
+    }function running(){
+        hide('rootdir');hide('urls');show('running');show('btns');
+    }function internal(){
+        var path = "{{internal_path}}";
+        window.location.href = window.location.href+path;
+    }function external(){
+        var path = "{{external_path}}";
+        window.location.href = window.location.href+path;
+    }function contacts(){
+        var path = "contacts/all";
+        window.location.href = window.location.href+path;
+    }function apps(){
+        var path = "myapps/all";
+        window.location.href = window.location.href+path;
+    }function screenstream(port){
+        if(port == -1){alert("Service is Not Running...Please Run it from the app first...");return;}
+        running();
+        window.location.href = "http://" +
+            window.location.hostname+":"+port+"/";
+    }function senddata(port){
+        if(port == -1){alert("Service is Not Running...Please Run it from the app first...");return;}
+        running();
+        window.location.href = "http://" +
+            window.location.hostname+":"+port+"/";
+    }function receivedata(port){
+        if(port == -1){alert("Service is Not Running...Please Run it from the app first...");return;}
+        running();
+        window.location.href = "http://" +
+            window.location.hostname+":"+port+"/";
+    }
+
+</script>
+
+</head>
+
+<body>
+
+<div id="btns">
+    <input type="button" onclick="root()" class="button" value="Root Directory"/>
+    <input type="button" onclick="internal()" class="button" value="Internal Storage"/>
+    <input type="button" onclick="external()" class="button" value="External Storage"/>
+    <!--<input type="button" onclick="otg()" class="button" value="Otg"/>-->
+    <input type="button" onclick="contacts()" class="button" value="My Contacts"/>
+    <input type="button" onclick="apps()" class="button" value="My Apps"/>
+    <input type="button" onclick="screenstream({{screenstreamport}})" class="button" value="Screen Stream"/>
+    <input type="button" onclick="senddata({{senddataport}})" class="button" value="Send Data"/>
+    <input type="button" onclick="receivedata({{receivedataport}})" class="button" value="Receive Data"/>
+    <input type="button" onclick="urls()" class="button" value="My IP's"/>
+    <input type="button" onclick="running()" class="button" value="Running Services"/>
+</div>
+
+<div id='rootdir' >
+
+
+    <h>&nbsp; {{location}}</h><br><br>
+
+    <table>
+        <tr>
+            <td><a class="itemName" href="{{parent}}">Parent  Directory</a></td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td><a class="itemName" href="{{zip}}">Download as .zip</a></td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td><a class="itemName" href="{{gallery}}">Open Images in Gallery</a></td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td class="itemName">Files On Current Level : {{filesize}} </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table align="center" class="polaroid" cellspacing="5"  >
+        <tr>
+            <td></td>
+            <td>Name</td>
+            <td>&nbsp;&nbsp;</td>
+            <td>Date Modified</td>
+            <td>Size</td>
+        </tr>
+        <tr>
+            <td><hr></td>
+            <td colspan="2"><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+        </tr>
+
+
+        {{#list_item}}
+
+        <tr class="row_item" onclick="window.location.href = &quot;{{onclick}}&quot; ;">
+            <td><img src="{{icon}}"></td>
+            <td>{{name}}</td>
+            <td>&nbsp;&nbsp;</td>
+            <td>{{date}}</td>
+            <td>{{size}}</td>
+        </tr>
+        <tr>
+            <td><hr></td>
+            <td colspan="2"><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+        </tr>
+
+
+        {{/list_item}}
+
+    </table>
+    {{^list_item}}
+    <h><br><br><hr>Empty Directory</h>
+    {{/list_item}}
+
+</div>
+
+<div id='urls' class="list">
+    <h>Ip Addresses : </h><br><hr>
+    {{#ip_list}}
+        {{url}}<br><hr>
+    {{/ip_list}}
+
+</div>
+
+<div id='running' class="list">
+    <h>Running Services : </h><br><hr>
+    {{#service_list}}
+        {{service_name}}<br><hr>
+    {{/service_list}}
+
+</div>
+
+
+</body>
+</html>
