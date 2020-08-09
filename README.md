@@ -1,10 +1,12 @@
 # This Repository Contains a list of my Android Projects, I was working on during my college days
 
-<br><hr><br>
+<br><br>
 
 ## 1. **Android Audio Equilizer**
 - Simple Android App, that can equalize system audio and can also set audio presets.
 - The Audio level can be visualized also
+
+<br><br>
 
 
 ## 2. **MyWebServer2**
@@ -13,7 +15,7 @@
 - Display live preview of Screen Stream real time on a browser
 - Send / Receive Files
 
-
+<br><br>
 
 ## 3. **PDF Manager**
 #### A PDF editor and viewer app with various functionalities like
@@ -26,13 +28,14 @@
 - Add a watermark text / Image
 - Add text or Background Image
 
+<br><br>
 
 ## 4. **QR and BarCode Scanner**
 - The app can be used to scan or Generate any QR / Bar code
 
 
 
-<br><hr><br>
+<br><hr>
 
 
 
